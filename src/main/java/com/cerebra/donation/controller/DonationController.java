@@ -17,18 +17,18 @@ public class DonationController {
     private DonationService donationService;
 
 
- @PostMapping("/add")
-        public ResponseEntity add(@RequestBody @Valid Donation donation)
-        {
-         donationService.SaveDonation(donation);
-         return new ResponseEntity("User Is Added", HttpStatus.CREATED);
-         }
+// @PostMapping("/add")
+//        public ResponseEntity add(@RequestBody @Valid Donation donation)
+//        {
+//         donationService.SaveDonation(donation);
+//         return new ResponseEntity("User Is Added", HttpStatus.CREATED);
+//         }
 
 
     @GetMapping("/adds")
     public String adds()
     {
-       System.out.println("Hello world");
+//       System.out.println("Hello world");
         return "Hello Dev Team";
     }
 }
