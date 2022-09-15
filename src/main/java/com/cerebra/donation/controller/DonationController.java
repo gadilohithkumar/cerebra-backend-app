@@ -10,25 +10,24 @@ import javax.validation.Valid;
 
 
 @RestController
-@CrossOrigin // For Intigration of FrontEnd And BackEnd
+//@CrossOrigin // For Intigration of FrontEnd And BackEnd
 @RequestMapping("/donations")
 public class DonationController {
     @Autowired
     private DonationService donationService;
 
 
-// @PostMapping("/add")
-//        public ResponseEntity add(@RequestBody @Valid Donation donation)
-//        {
-//         donationService.SaveDonation(donation);
-//         return new ResponseEntity("User Is Added", HttpStatus.CREATED);
-//         }
-
+ @PostMapping("/add")
+        public ResponseEntity add(@RequestBody @Valid Donation donation)
+        {
+         donationService.SaveDonation(donation);
+         return new ResponseEntity("User Is Added", HttpStatus.CREATED);
+         }
 
     @GetMapping("/adds")
     public String adds()
     {
-//       System.out.println("Hello world");
+       System.out.println("Hello world");
         return "Hello Dev Team";
     }
 }
