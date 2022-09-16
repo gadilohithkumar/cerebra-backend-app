@@ -10,7 +10,7 @@ import javax.validation.Valid;
 
 
 @RestController
-//@CrossOrigin // For Intigration of FrontEnd And BackEnd
+@CrossOrigin // For Intigration of FrontEnd And BackEnd
 @RequestMapping("/donations")
 public class DonationController {
     @Autowired
